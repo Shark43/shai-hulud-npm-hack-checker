@@ -1,13 +1,13 @@
 #!/bin/bash
 
-SEARCH_DIRS=("/Users/PROJECTS/FOLDERS")
+SEARCH_DIRS=("/Users/Desktop/Projects/")
 
 CWD=$(pwd)
 # Read bad dependencies into an array
 BAD_DEPS=()
 while IFS= read -r line || [ -n "$line" ]; do
     [[ -n "$line" ]] && BAD_DEPS+=("$line")
-done < ./bed-npm-list.txt
+done < ./bad-npm-list.txt
 
 # Statistics tracking
 START_TIME=$(date +%s)
